@@ -1,5 +1,7 @@
 #include <iostream>
 #include "add.h"
+#include "multiply.h"
+#include "power.h"
 using namespace std;
 
 void areEquals( double expected, double got )
@@ -10,7 +12,17 @@ void areEquals( double expected, double got )
 		cout << "Test passed!\n";
 }
 
-void test1()
+void testAdd()
 {
 	areEquals( 4, add( 2, 2 ) );
+}
+
+void testMultiply()
+{
+	areEquals( -121, multiply( 11, -11 ) );
+}
+
+void testPower()
+{
+	areEquals( 32, power( 2, 5 ) );
 }
